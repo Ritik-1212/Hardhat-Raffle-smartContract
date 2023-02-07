@@ -13,7 +13,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   const { deployer } = await getNamedAccounts();
   let VRFCoordinatorV2Address, subscriptionId;
   const chainId = network.config.chainId;
-  const VRF_SUB_FUND_AMOUNT = ethers.utils.parseEther("30");
+ 
 
   if (chainId == 31337) {
     const VRFCoordinatorV2Mock = await ethers.getContract(
